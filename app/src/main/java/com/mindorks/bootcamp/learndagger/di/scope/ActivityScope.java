@@ -9,3 +9,4 @@ import javax.inject.Scope;
 @Retention(RetentionPolicy.SOURCE)
 public @interface ActivityScope {
 }
+
