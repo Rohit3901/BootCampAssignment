@@ -10,5 +10,5 @@ import javax.inject.Inject
 class HomeViewModel @Inject constructor(private val databaseService: DatabaseService, private val networkService: NetworkService,
                                         private val networkHelper: NetworkHelper) {
 
-    fun getHomeData(): String = "${databaseService.dummyData} ${networkService.dummyData} ${networkHelper.isNetworkConnected}"
+    fun getHomeData(): String = "${databaseService.getDummyData()} ${networkService.getDummyData()} ${networkHelper.isNetworkConnected()}"
 }

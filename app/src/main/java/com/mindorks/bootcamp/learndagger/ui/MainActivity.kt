@@ -1,8 +1,11 @@
 package com.mindorks.bootcamp.learndagger.ui
 
 import android.os.Bundle
+import android.widget.FrameLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 import com.mindorks.bootcamp.learndagger.MyApplication
 import com.mindorks.bootcamp.learndagger.R
 import com.mindorks.bootcamp.learndagger.di.component.DaggerActivityComponent
@@ -21,8 +24,15 @@ class MainActivity :AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         tvData = findViewById(R.id.tvData)
-
         tvData?.setText(viewModel.getSomeData())
+
+        addFragment()
+    }
+
+    private fun addFragment() {
+        var fragmentManager : FragmentManager = supportFragmentManager
+        var fragment:Fragment = HomeFragment()
+        fragmentManager.beginTransaction().add(R.id.mainFrame,fragment).commit()
     }
 
     fun getDependencies(){

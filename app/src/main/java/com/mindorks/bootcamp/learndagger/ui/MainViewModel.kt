@@ -12,6 +12,6 @@ class MainViewModel @Inject constructor( private val databaseService: DatabaseSe
 
 
     //single statement function
-    fun getSomeData(): String = "${databaseService.dummyData} ${networkService.dummyData}"
+    fun getSomeData(): String = "${databaseService.getDummyData()} ${networkService.getDummyData()}"
 
 }
