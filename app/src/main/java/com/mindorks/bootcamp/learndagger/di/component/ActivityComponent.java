@@ -15,7 +15,5 @@ public interface ActivityComponent {
 
     void inject(MainActivity activity);
 
-    @ActivityContext
-    Context getContext();
 
 }

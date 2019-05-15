@@ -13,11 +13,15 @@ import javax.inject.Singleton;
  */
 @Singleton
 public class NetworkService {
+    private Context context;
+    private String apiKey;
 
     @Inject
     public NetworkService(@ApplicationContext Context context,
                           @NetworkInfo String apiKey) {
         // do the initialisation here
+        this.context = context;
+        this.apiKey = apiKey;
     }
 
     public String getDummyData() {

@@ -10,10 +10,10 @@ import javax.inject.Singleton;
 @Singleton
 public class NetworkHelper {
     // Should be Application Context
-
+    private Context context;
     @Inject
-    public NetworkHelper(@ApplicationContext Context context,Boolean network ) {
-
+    public NetworkHelper(@ApplicationContext Context context ) {
+        this.context = context;
     }
 
     public boolean isNetworkConnected() {

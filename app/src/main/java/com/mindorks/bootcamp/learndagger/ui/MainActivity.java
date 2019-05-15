@@ -30,12 +30,13 @@ public class MainActivity extends AppCompatActivity {
 
         TextView tvData = findViewById(R.id.tvData);
         frameLayout = findViewById(R.id.mainFrame);
-        //tvData.setText(viewModel.getSomeData());
+        tvData.setText(viewModel.getSomeData());
         addFragment();
 
     }
 
     private void addFragment() {
+
         FragmentManager fragmentManager = getSupportFragmentManager();
         Fragment fragment = new HomeFragment();
         fragmentManager.beginTransaction().add(R.id.mainFrame,fragment).commit();

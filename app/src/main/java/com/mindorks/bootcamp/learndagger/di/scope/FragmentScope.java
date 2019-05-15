@@ -6,6 +6,6 @@ import java.lang.annotation.RetentionPolicy;
 import javax.inject.Scope;
 
 @Scope
-@Retention(RetentionPolicy.RUNTIME)
+@Retention(RetentionPolicy.SOURCE)
 public @interface FragmentScope {
 }

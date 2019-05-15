@@ -17,7 +17,5 @@ public interface FragmentComponent {
 
     void inject(HomeFragment fragment);
 
-    @ApplicationContext
-    Context getContext();
 
 }
