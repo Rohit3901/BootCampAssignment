@@ -26,8 +26,9 @@ class MyApplication :Application(){
     fun getDependencies() {
 
         applicationComponent = DaggerApplicationComponent
-                .builder().applicationModule(ApplicationModule(this)).build()
-
+                .builder()
+                .applicationModule(ApplicationModule(this))
+                .build()
         applicationComponent.inject(this)
 
 

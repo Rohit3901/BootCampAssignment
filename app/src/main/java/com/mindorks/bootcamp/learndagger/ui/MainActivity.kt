@@ -10,6 +10,7 @@ import com.mindorks.bootcamp.learndagger.MyApplication
 import com.mindorks.bootcamp.learndagger.R
 import com.mindorks.bootcamp.learndagger.di.component.DaggerActivityComponent
 import com.mindorks.bootcamp.learndagger.di.module.ActivityModule
+import kotlinx.android.synthetic.main.activity_main.*
 import javax.inject.Inject
 
 class MainActivity :AppCompatActivity() {
@@ -17,15 +18,12 @@ class MainActivity :AppCompatActivity() {
     @Inject
     lateinit var viewModel: MainViewModel //lateinit tells compiler to initialize it later
 
-    private var tvData: TextView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         getDependencies()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        tvData = findViewById(R.id.tvData)
-        tvData?.setText(viewModel.getSomeData())
-
+        tvData?.text = viewModel.getSomeData()
         addFragment()
     }
 

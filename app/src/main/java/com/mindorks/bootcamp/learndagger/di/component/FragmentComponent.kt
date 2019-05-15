@@ -1,8 +1,6 @@
 package com.mindorks.bootcamp.learndagger.di.component
 
-import android.content.Context
 import com.mindorks.bootcamp.learndagger.di.module.FragmentModule
-import com.mindorks.bootcamp.learndagger.di.qualifier.ApplicationContext
 import com.mindorks.bootcamp.learndagger.di.scope.FragmentScope
 import com.mindorks.bootcamp.learndagger.ui.HomeFragment
 import dagger.Component
@@ -13,5 +11,5 @@ import dagger.Component
 interface FragmentComponent {
 
     fun inject( fragment :HomeFragment)
-    @ApplicationContext fun getContext():Context
+
 }

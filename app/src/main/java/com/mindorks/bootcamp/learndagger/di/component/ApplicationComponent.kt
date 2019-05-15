@@ -15,6 +15,7 @@ import javax.inject.Singleton
 interface ApplicationComponent {
 
     fun inject(application: MyApplication)
+
     @ApplicationContext
     fun getContext():Context
 
