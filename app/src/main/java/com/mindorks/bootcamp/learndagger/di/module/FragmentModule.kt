@@ -7,8 +7,8 @@ import dagger.Module
 import dagger.Provides
 
 @Module
-class FragmentModule constructor(private val fragment: Fragment){
+class FragmentModule constructor(private val fragment: Fragment) {
     @ActivityContext
     @Provides
-    fun provideContext():Context?=fragment.context
+    fun provideContext(): Context? = fragment.context
 }

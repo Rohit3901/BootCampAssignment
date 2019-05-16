@@ -7,10 +7,10 @@ import dagger.Module
 import dagger.Provides
 
 @Module
-class ActivityModule constructor(private val activity:Activity){
+class ActivityModule constructor(private val activity: Activity) {
 
     @ActivityContext
     @Provides
-    fun getContext():Context = activity
+    fun getContext(): Context = activity
 
 }

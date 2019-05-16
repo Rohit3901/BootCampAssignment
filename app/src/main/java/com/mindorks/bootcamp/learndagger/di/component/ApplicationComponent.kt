@@ -17,9 +17,9 @@ interface ApplicationComponent {
     fun inject(application: MyApplication)
 
     @ApplicationContext
-    fun getContext():Context
+    fun getContext(): Context
 
-    fun getNetworkService():NetworkService
-    fun getDatabaseService():DatabaseService
-    fun getNetworkHelper():NetworkHelper
+    fun getNetworkService(): NetworkService
+    fun getDatabaseService(): DatabaseService
+    fun getNetworkHelper(): NetworkHelper
 }

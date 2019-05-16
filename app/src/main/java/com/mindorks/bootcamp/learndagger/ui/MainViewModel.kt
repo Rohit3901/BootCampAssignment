@@ -8,7 +8,7 @@ import javax.inject.Inject
 //primary constructor
 //if annotataion or access modifier is there we have to use constructor
 @ActivityScope
-class MainViewModel @Inject constructor( private val databaseService: DatabaseService,private val networkService: NetworkService) {
+class MainViewModel @Inject constructor(private val databaseService: DatabaseService, private val networkService: NetworkService) {
 
 
     //single statement function

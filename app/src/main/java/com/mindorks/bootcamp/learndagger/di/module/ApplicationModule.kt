@@ -4,29 +4,32 @@ import android.content.Context
 import com.mindorks.bootcamp.learndagger.MyApplication
 import com.mindorks.bootcamp.learndagger.di.qualifier.ApplicationContext
 import com.mindorks.bootcamp.learndagger.di.qualifier.DatabaseInfo
+import com.mindorks.bootcamp.learndagger.di.qualifier.NetworkHelperInfo
 import com.mindorks.bootcamp.learndagger.di.qualifier.NetworkInfo
 import dagger.Module
 import dagger.Provides
 
 @Module
-class ApplicationModule constructor(private val application: MyApplication){
+class ApplicationModule constructor(private val application: MyApplication) {
 
     @ApplicationContext
     @Provides
-    fun provideContext():Context = application
-    @Provides
-    @DatabaseInfo
-    fun provideDatabaseName():String = "dummy_db"
+    fun provideContext(): Context = application
 
     @Provides
     @DatabaseInfo
-    fun provideDatabaseVersion():Int = 1
+    fun provideDatabaseName(): String = "dummy_db"
+
+    @Provides
+    @DatabaseInfo
+    fun provideDatabaseVersion(): Int = 1
 
     @Provides
     @NetworkInfo
-    fun provideApiKey():String="SOME_API_KEY"
+    fun provideApiKey(): String = "SOME_API_KEY"
 
     @Provides
-    fun provideNetworkConnected():Boolean=false
+    @NetworkHelperInfo
+    fun provideNetworkConnected(): Boolean = false
 
 }

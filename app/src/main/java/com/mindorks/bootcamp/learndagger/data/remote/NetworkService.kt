@@ -9,7 +9,7 @@ import javax.inject.Singleton
 @Singleton
 class NetworkService @Inject constructor(
         @ApplicationContext private val context: Context,
-        @NetworkInfo private val apiKey:String
-){
-    fun getDummyData():String = "NETWORK_DUMMY_DATA"
+        @NetworkInfo private val apiKey: String
+) {
+    fun getDummyData(): String = "NETWORK_DUMMY_DATA"
 }

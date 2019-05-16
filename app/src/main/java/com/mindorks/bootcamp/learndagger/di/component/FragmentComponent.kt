@@ -6,10 +6,10 @@ import com.mindorks.bootcamp.learndagger.ui.HomeFragment
 import dagger.Component
 
 @FragmentScope
-@Component(dependencies = [ApplicationComponent::class],modules = [FragmentModule::class])
+@Component(dependencies = [ApplicationComponent::class], modules = [FragmentModule::class])
 
 interface FragmentComponent {
 
-    fun inject( fragment :HomeFragment)
+    fun inject(fragment: HomeFragment)
 
 }

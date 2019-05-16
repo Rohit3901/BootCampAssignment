@@ -12,5 +12,5 @@ class DatabaseService @Inject constructor(
         @DatabaseInfo private val databaseName: String,
         @DatabaseInfo private val version: Int
 ) {
-    fun getDummyData():String = "DATABASE_DUMMY_DATA"
+    fun getDummyData(): String = "DATABASE_DUMMY_DATA"
 }

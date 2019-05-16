@@ -13,27 +13,28 @@ import com.mindorks.bootcamp.learndagger.di.module.FragmentModule
 import kotlinx.android.synthetic.main.activity_main.*
 import javax.inject.Inject
 
-class HomeFragment:Fragment(){
+class HomeFragment : Fragment() {
 
     @Inject
-    lateinit var homeViewModel:HomeViewModel
-    private var tvData: TextView? = null
+    lateinit var homeViewModel: HomeViewModel
+    private lateinit  var tvData: TextView
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         getDependencies()
         super.onCreate(savedInstanceState)
     }
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val view =  inflater.inflate(R.layout.fragment_home, container, false)
+        val view = inflater.inflate(R.layout.fragment_home, container, false)
 
         tvData = view.findViewById(R.id.fragText)
-        tvData?.setText(homeViewModel.getHomeData())
+        tvData.setText(homeViewModel.getHomeData())
         return view
     }
 
 
-    fun getDependencies(){
+    fun getDependencies() {
         DaggerFragmentComponent
                 .builder()
                 .applicationComponent((activity?.applicationContext as MyApplication).applicationComponent)

@@ -11,12 +11,15 @@ import com.mindorks.bootcamp.learndagger.di.component.DaggerApplicationComponent
 import com.mindorks.bootcamp.learndagger.di.module.ApplicationModule
 import com.mindorks.bootcamp.learndagger.utils.NetworkHelper
 
-class MyApplication :Application(){
+class MyApplication : Application() {
     lateinit var applicationComponent: ApplicationComponent
 
-    @Inject lateinit var networkService: NetworkService
-    @Inject lateinit var databaseService: DatabaseService
-    @Inject lateinit var networkHelper: NetworkHelper
+    @Inject
+    lateinit var networkService: NetworkService
+    @Inject
+    lateinit var databaseService: DatabaseService
+    @Inject
+    lateinit var networkHelper: NetworkHelper
 
     override fun onCreate() {
         super.onCreate()

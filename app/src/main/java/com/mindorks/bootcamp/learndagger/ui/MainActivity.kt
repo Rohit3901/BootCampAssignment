@@ -13,7 +13,7 @@ import com.mindorks.bootcamp.learndagger.di.module.ActivityModule
 import kotlinx.android.synthetic.main.activity_main.*
 import javax.inject.Inject
 
-class MainActivity :AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
 
     @Inject
     lateinit var viewModel: MainViewModel //lateinit tells compiler to initialize it later
@@ -28,12 +28,12 @@ class MainActivity :AppCompatActivity() {
     }
 
     private fun addFragment() {
-        var fragmentManager : FragmentManager = supportFragmentManager
-        var fragment:Fragment = HomeFragment()
-        fragmentManager.beginTransaction().add(R.id.mainFrame,fragment).commit()
+        var fragmentManager: FragmentManager = supportFragmentManager
+        var fragment: Fragment = HomeFragment()
+        fragmentManager.beginTransaction().add(R.id.mainFrame, fragment).commit()
     }
 
-    fun getDependencies(){
+    fun getDependencies() {
         DaggerActivityComponent
                 .builder()
                 .applicationComponent((applicationContext as MyApplication).applicationComponent) //as is used to typecast objects
